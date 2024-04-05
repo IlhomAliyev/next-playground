@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export const OpenGraphHead = () => {
+export const OpenGraphHead = ({ imageURL }: { imageURL: string }) => {
   return (
     <Head>
       <title>TEST</title>
@@ -12,19 +12,13 @@ export const OpenGraphHead = () => {
       <meta property="og:url" content="https://google.com/" />
       <meta property="og:title" content="Test Title" />
       <meta property="og:description" content="Test Description" />
-      <meta
-        property="og:image"
-        content="https://intercom-api-dev.globaltrans.uz/uploads/culture-center-support/2024-02-14-155235-0ad36c8d00.jpg"
-      />
+      <meta property="og:image" content={imageURL} />
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://google.com/" />
       <meta property="twitter:title" content="Test Title" />
       <meta property="twitter:description" content="Test Description" />
-      <meta
-        property="twitter:image"
-        content="https://intercom-api-dev.globaltrans.uz/uploads/culture-center-support/2024-02-14-155235-0ad36c8d00.jpg"
-      />
+      <meta property="twitter:image" content={imageURL} />
     </Head>
   );
 };
